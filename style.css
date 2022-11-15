@@ -1,4 +1,70 @@
-body {background-color:tan;}
-h1{color:green;}
+body{
+    background-color: rgb(123, 129, 132);
+    font-family:arial
+}
+h1{
+    color:rgb(103, 104, 105);
+    font-family:verdana;
+    padding: 0px 10px 0px;
 
+}
+.maindiv {
 
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px 3px rgb(69, 69, 71);
+    background-color:rgb(236, 236, 237);
+    color:rgb(72, 73, 73);
+    font-weight: 530;
+    width: 550px;
+    height: 420px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto; 
+}
+
+/* A way to center elements inside of the mainDiv */
+label{
+    display: inline-block;
+    width: 100px;
+    margin: 5px auto;
+}
+
+/* To separate each line*** Not sure if it is the right way to do it */
+section{
+    
+    margin-bottom: 10px;
+
+}
+
+/* Only for inputs section */
+.inputs{
+    
+    width: 300px;
+    margin: auto;
+    padding-top: 20px;
+}
+footer{
+    color: rgb(157, 157, 160);
+    font-size: 90%;
+    margin-bottom: 500px;
+    text-align: justify;
+}
+
+button{
+    background-color: rgba(84, 88, 90, 0.821);
+    color: aliceblue;
+    border:rgb(121, 121, 122);
+    border-radius: 5px;
+    padding: 6px 7px 6px;
+}
+
+/* Color change when we hover over the button */
+button:hover{
+    background-color: rgb(133, 138, 144);
+    transition: 0,5s;
+}
+
+/* General notes:
+-problems with laying out items properly
+-check display options and flex-box
+-the way footer reacts with the mainDiv is a bit strange */

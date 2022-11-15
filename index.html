@@ -1,16 +1,63 @@
-<html>
-    <head>
-    <script src="script.js"></script>
+<!DOCTYPE html>
+
+<head>
+<!-- do not put script here, it created problems(do it at the end of the body)-->
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+    <title>Simple Interest Calculator</title>
+</head>
+
+<body>
+    
+    <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
+        <!-- Separated all inputs for working easier in css -->
+        <div class="inputs">
+        
+            <!-- Added sections and labels -->
+            <section>
+                <label for="principal">Amount:</label>
+                <input type="number" id="principal"> 
+            </section>
+            <section>
+                <label for="rate">Rate:</label>
+                <input type="range" id="rate" min="1" max="20" step="0.25" value="10.25">
+                <span id="rate_val">
+                    10.25%
+                </span>
+            </section>
+            <section>
+                <label for="years">No. of Years:</label>
+                <select id="years">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+            </section>
+             
+                <button onclick="compute()">Compute Interest</button>
+                <br>
+                <br>
+                <span id="result"></span><br>  
+           
+        </div>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        <footer>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+            &#169; This Calculator belongs to Nataša Kolarić
+        </footer>
+        
+    
+</div>
+<script src="script.js"></script>
+</body>
+
+
 </html>
