@@ -19,10 +19,7 @@ range.addEventListener('input', (event) => {
 function compute() {
     let principal = document.querySelector('#principal').value;
     let rate = document.querySelector('#rate').value;
-
-    // problems with defining new 'year' variable, used 'years' instead---output full year
     let years = document.querySelector('#years').value;
-    years = new Date().getFullYear() + parseInt(years);
 
     //Input value conditional, focus on input and reset function
     let form = document.querySelector('#principal')
@@ -36,8 +33,11 @@ function compute() {
     
     
     // Interest rate calculation
-    let interest = (principal * years * rate) / 100;
+    let interest = principal * years * rate / 100;
 
+    let year = document.querySelector('#years').value;
+    year = new Date().getFullYear() + parseInt(years);
+    
     let button = document.querySelector('button');
     button.addEventListener('click', function () {
         let result = document.querySelector("#result");
@@ -45,8 +45,8 @@ function compute() {
     });
 
     //line break in template literal didn`t work, find better way to write this code
-
-    return document.getElementById("result").innerHTML = "If you deposit <mark> " + principal + " </mark>,\<br\>at an interest rate of <mark>" + rate + "%</mark>\<br\>You will receive an amount of <mark>" + interest + "</mark>,\<br\>in the year <mark>" + years + "</mark>\<br\>"
+ 
+    return document.getElementById("result").innerHTML = "If you deposit <mark> " + principal + " </mark>,\<br\>at an interest rate of <mark>" + rate + "%</mark>\<br\>You will receive an amount of <mark>" + interest + "</mark>,\<br\>in the year <mark>" + year + "</mark>\<br\>"
 
     }
   }
@@ -62,3 +62,4 @@ let resetInput = () =>{
 //     you will receive an amount of ${interest}, 
 //     in the year of ${years}`
     
+
